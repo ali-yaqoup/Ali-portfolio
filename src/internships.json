@@ -1,0 +1,12 @@
+[
+  {
+    "role": "Fullstack Development Intern",
+    "company": "OppoTrain LLC",
+    "logo": "OT",
+    "date": "Jan 2026",
+    "achievements": [
+      "Successfully completed 320 hours developing fullstack applications using ReactJS frontend integrated with Django backend",
+      "Implementing responsive user interfaces and RESTful API connections"
+    ]
+  }
+]

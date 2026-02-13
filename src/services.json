@@ -1,0 +1,27 @@
+[
+  {
+    "icon": "Code2",
+    "title": "Full Stack Development",
+    "description": "Building responsive web applications using React, Angular, Laravel, and Node.js",
+    "gradient": "from-indigo-500 to-purple-500"
+  },
+  {
+    "icon": "TestTube2",
+    "title": "QA & Testing",
+    "description": "Manual & Automation Testing using Selenium and Playwright",
+    "gradient": "from-emerald-500 to-teal-500"
+  },
+  
+  {
+    "icon": "Cpu",
+    "title": "Automation",
+    "description": "Automating testing pipelines and workflows",
+    "gradient": "from-purple-500 to-pink-500"
+  },
+  {
+    "icon": "Database",
+    "title": "Database Design",
+    "description": "Designing efficient database architectures",
+    "gradient": "from-cyan-500 to-blue-500"
+  }
+]

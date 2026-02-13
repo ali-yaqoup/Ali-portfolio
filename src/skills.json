@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Frontend Frameworks",
+    "skills": ["React", "Angular", "Bootstrap", "Tailwind CSS", "CSS3", "HTML5"]
+  },
+  {
+    "title": "Programming Languages",
+    "skills": ["JavaScript", "TypeScript", "Python", "Java", "C++", "SQL", "PHP"]
+  },
+  {
+    "title": "Backend & Databases",
+    "skills": ["Node.js", "Express", "Laravel", "JavaFX", "MySQL", "Firebase"]
+  },
+  {
+    "title": "Tools & Technologies",
+    "skills": ["Git", "Socket.io", "Real-time Communication", "Authentication", "REST APIs"]
+  },
+  {
+    "title": "Design & UI/UX",
+    "skills": ["Figma", "Canva", "UI/UX Design", "Wireframing", "Prototyping", "Responsive Design"]
+  },
+  {
+    "title": "Core Competencies",
+    "skills": ["Full Stack Development", "Problem Solving", "Logical Thinking", "Team Collaboration", "Web Applications"]
+  }
+]

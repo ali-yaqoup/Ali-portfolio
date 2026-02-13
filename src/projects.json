@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "title": "Technician Hiring Platform (THP)",
+    "description": "Full-stack web application connecting job owners with skilled technicians. Job owners can post tasks, technicians browse opportunities and submit proposals. Features real-time messaging, notifications, and review system.",
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600",
+    "technologies": ["Angular", "Laravel", "MySQL", "Socket.io", "Real-time Messaging"],
+    "category": "fullstack",
+    "featured": true,
+    "github": "https://github.com/ali-yaqoup/Project-THP",
+    "demo": "#",
+    "startDate": "2025",
+    "status": "In Progress"
+  },
+  {
+    "id": 2,
+    "title": "Hotels and Flights Booking System",
+    "description": "Full-stack travel agency booking application. Developed secure user authentication module with registration and password reset features using Java, JavaFX for frontend, and MySQL database.",
+    "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600",
+    "technologies": ["Java", "JavaFX", "MySQL", "Authentication"],
+    "category": "fullstack",
+    "featured": true,
+    "github": "https://github.com/ali-yaqoup/Advanced-Programming-Project",
+    "demo": "#",
+    "startDate": "09/2024",
+    "endDate": "11/2024",
+    "status": "Completed"
+  },
+  {
+    "id": 3,
+    "title": "Time4Meds Mobile App Design",
+    "description": "Designed comprehensive mobile app enabling patients to manage medications, access health content, and communicate with doctors. Focus on intuitive UI/UX with wireframing and prototyping.",
+    "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600",
+    "technologies": ["Figma", "Canva", "UI/UX Design", "Wireframing"],
+    "category": "frontend",
+    "featured": true,
+    "github": "https://github.com/ali-yaqoup/MedTrack-UIUX",
+    "demo": "#",
+    "startDate": "11/2024",
+    "status": "Completed"
+  },
+  {
+    "id": 4,
+    "title": "Social Media Platform (Web 1 Project)",
+    "description": "Basic responsive website built as part of the Web 1 course. Collaborated in a 3-member team to build two core pages of a social media platform with modern UI design.",
+    "image": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600",
+    "technologies": ["React", "CSS", "Firebase"],
+    "category": "frontend",
+    "featured": false,
+    "github": "https://github.com/ali-yaqoup/Web-dev-1",
+    "demo": "#",
+    "startDate": "02/2023",
+    "endDate": "04/2023",
+    "status": "Completed"
+  }
+  ,
+  {
+    "id": 5,
+    "title": "Quality Assurance Toolkit",
+    "description": "A collection of automated QA scripts and test plans for web applications including unit, integration, and end-to-end tests. Implemented CI test pipelines and reports.",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80&auto=format&fit=crop",
+    "technologies": ["Selenium", "Jest", "Cypress", "GitHub Actions"],
+    "category": "testing",
+    "featured": false,
+    "github": "https://github.com/ali-yaqoup/Quality-Assurance",
+    "demo": "#",
+    "startDate": "03/2024",
+    "status": "Completed"
+  },
+  {
+    "id": 6,
+    "title": "Data Structures Practice",
+    "description": "Algorithms and data structures implementations and exercises in JavaScript and Java, with visualization utilities and performance benchmarks.",
+    "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600",
+    "technologies": ["Java", "JavaScript", "Algorithms"],
+    "category": "algorithms",
+    "featured": false,
+    "github": "https://github.com/ali-yaqoup/Data-Structures-Project",
+    "demo": "#",
+    "startDate": "2023",
+    "status": "Completed"
+  }
+]

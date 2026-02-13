@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Java Fundamentals",
+    "organization": "DataCamp",
+    "year": "2026",
+    "verified": true
+  },
+  {
+    "name": "Climate Justice: From Inequality to Inclusion",
+    "organization": "CliVEx",
+    "year": "Jan 2026",
+    "verified": true,
+    "distinction": true
+  },
+  {
+    "name": "Frontend Development Certificate",
+    "organization": "Professional Training",
+    "year": "2025",
+    "verified": true
+  },
+  {
+    "name": "ChatGPT Fundamentals",
+    "organization": "DataCamp",
+    "year": "2026",
+    "verified": true
+  }
+]

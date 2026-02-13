@@ -1,0 +1,155 @@
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Menu, X, Download, FileText, Home, User, Code, Briefcase, GraduationCap, Award, Mail } from 'lucide-react';
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+      
+      // تحديث القسم النشط
+      const sections = ['home', 'about', 'services', 'skills', 'projects', 'internships', 'education', 'certifications', 'contact'];
+      const scrollPosition = window.scrollY + 100;
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { id: 'home', label: 'الرئيسية', icon: Home },
+    { id: 'about', label: 'نبذة عني', icon: User },
+    { id: 'services', label: 'الخدمات', icon: Briefcase },
+    { id: 'skills', label: 'المهارات', icon: Code },
+    { id: 'projects', label: 'المشاريع', icon: FileText },
+    { id: 'internships', label: 'الخبرات', icon: Briefcase },
+    { id: 'education', label: 'التعليم', icon: GraduationCap },
+    { id: 'certifications', label: 'الشهادات', icon: Award },
+    { id: 'contact', label: 'اتصل بي', icon: Mail },
+  ];
+
+  return (
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5 }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? 'bg-gray-900/95 backdrop-blur-lg shadow-lg' : 'bg-transparent'
+      }`}
+    >
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Logo */}
+          <motion.a
+            href="#home"
+            whileHover={{ scale: 1.05 }}
+            className="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 text-transparent bg-clip-text"
+          >
+            Ali Yaqoub
+          </motion.a>
+
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex items-center space-x-1 rtl:space-x-reverse">
+            {navLinks.map((link) => {
+              const Icon = link.icon;
+              return (
+                <motion.a
+                  key={link.id}
+                  href={`#${link.id}`}
+                  whileHover={{ scale: 1.05 }}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${
+                    activeSection === link.id
+                      ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow-lg shadow-indigo-500/30'
+                      : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+                  }`}
+                >
+                  <Icon className="w-4 h-4" />
+                  {link.label}
+                </motion.a>
+              );
+            })}
+          </div>
+
+          {/* CV Download Button - Desktop */}
+          <motion.a
+            href="https://drive.google.com/file/d/1ruMH2JKlbYpDE5EtO28bDAc168mKXAZn/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="hidden lg:flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-5 py-2.5 rounded-full font-medium shadow-lg hover:shadow-indigo-500/30 transition-all"
+          >
+            <Download className="w-4 h-4" />
+            السيرة الذاتية
+          </motion.a>
+            <a
+              href="https://drive.google.com/file/d/1ruMH2JKlbYpDE5EtO28bDAc168mKXAZn/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg mt-4"
+            >
+              <Download className="w-4 h-4" />
+              السيرة الذاتية
+            </a>
+        </div>
+
+        {/* Mobile Menu */}
+        <motion.div
+          initial={false}
+          animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
+          transition={{ duration: 0.3 }}
+          className="lg:hidden overflow-hidden"
+        >
+          <div className="py-4 space-y-2">
+            {navLinks.map((link) => {
+              const Icon = link.icon;
+              return (
+                <a
+                  key={link.id}
+                  href={`#${link.id}`}
+                  onClick={() => setIsOpen(false)}
+                  className={`flex items-center gap-3 px-4 py-3 rounded-lg transition ${
+                    activeSection === link.id
+                      ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white'
+                      : 'text-gray-300 hover:bg-gray-800'
+                  }`}
+                >
+                  <Icon className="w-5 h-5" />
+                  {link.label}
+                </a>
+              );
+            })}
+            
+            {/* CV Download Button - Mobile */}
+            <a
+              href="https://drive.google.com/file/d/1ruMH2JKlbYpDE5EtO28bDAc168mKXAZn/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg mt-4"
+            >
+              <Download className="w-5 h-5" />
+              تحميل السيرة الذاتية (PDF)
+            </a>
+          </div>
+        </motion.div>
+      </div>
+    </motion.nav>
+  );
+};
+
+export default Navbar;
