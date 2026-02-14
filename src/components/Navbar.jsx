@@ -85,27 +85,6 @@ const Navbar = () => {
             })}
           </div>
 
-          {/* CV Download Button - Desktop */}
-          <motion.a
-            href="https://drive.google.com/file/d/1ruMH2JKlbYpDE5EtO28bDAc168mKXAZn/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="hidden lg:flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-5 py-2.5 rounded-full font-medium shadow-lg hover:shadow-indigo-500/30 transition-all"
-          >
-            <Download className="w-4 h-4" />
-            السيرة الذاتية
-          </motion.a>
-            <a
-              href="https://drive.google.com/file/d/1ruMH2JKlbYpDE5EtO28bDAc168mKXAZn/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg mt-4"
-            >
-              <Download className="w-4 h-4" />
-              السيرة الذاتية
-            </a>
         </div>
 
         {/* Mobile Menu */}
